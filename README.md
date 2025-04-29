@@ -65,6 +65,8 @@ A lightweight, dynamic web-based scoreboard application for managing and display
 
 2. **Install dependencies**
    ```bash
+   pip install flask_sqlalchemy
+   
    pip install flask
 
 3. **Run the application**
