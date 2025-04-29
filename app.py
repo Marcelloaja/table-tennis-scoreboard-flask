@@ -1,19 +1,10 @@
 import os
 import logging
-
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import DeclarativeBase
+from extensions import db
 
-# Configure logging
+# Logging setup
 logging.basicConfig(level=logging.DEBUG)
-
-# Create base class for SQLAlchemy models
-class Base(DeclarativeBase):
-    pass
-
-# Initialize SQLAlchemy
-db = SQLAlchemy(model_class=Base)
 
 # Create the Flask app
 app = Flask(__name__)
@@ -27,11 +18,16 @@ app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
     "pool_pre_ping": True,
 }
 
-# Initialize the app with SQLAlchemy
+# Init database with app
 db.init_app(app)
 
-# Create all tables
+# Import routes to register all views
 with app.app_context():
-    # Import models to ensure tables are created
-    import models
+    from models import Player, Match
     db.create_all()
+
+# Penting: import routes setelah inisialisasi app & db
+from routes import *
+
+if __name__ == '__main__':
+    app.run(debug=True)

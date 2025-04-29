@@ -34,20 +34,18 @@
                                 <tr class="{% if loop.index == 1 %}table-warning{% endif %}">
                                     <td>{{ loop.index }}</td>
                                     <td>
-                                        {% if loop.index == 1 %}
-                                            <i class="fas fa-crown text-warning me-1"></i>
-                                        {% elif loop.index == 2 %}
-                                            <i class="fas fa-crown text-secondary me-1"></i>
-                                        {% elif loop.index == 3 %}
-                                            <i class="fas fa-crown" style="color: #cd7f32; margin-right: 4px;"></i>
-                                        <!-- {% elif loop.index == 4 %}
-                                            <i class="fas fa-star text-info me-1"></i>
-                                        {% elif loop.index == 5 %}
-                                            <i class="fas fa-star text-success me-1"></i> -->
-                                        {% else %}
-                                            {{ loop.index }}
-                                        {% endif %}
-                                    </td>
+    {% if loop.index == 1 %}
+        <i class="fas fa-crown text-warning me-1"></i>
+    {% elif loop.index == 2 %}
+        <i class="fas fa-crown text-secondary me-1"></i>
+    {% elif loop.index == 3 %}
+        <i class="fas fa-crown" style="color: #cd7f32; margin-right: 4px;"></i>
+    {% else %}
+        {{ loop.index }}
+    {% endif %}
+</td>
+
+
                                     <td>{{ player.name }}</td>
 
                                     <td>{{ player.wins }}</td>

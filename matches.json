@@ -2,19 +2,19 @@
     {
         "id": 1,
         "player1": "Marcello",
-        "player2": "Vindra",
-        "player1_sets": 2,
-        "player2_sets": 0,
-        "winner": "Marcello",
-        "match_date": "2025-04-29T15:44:52.197896",
+        "player2": "Tio",
+        "player1_sets": 0,
+        "player2_sets": 2,
+        "winner": "Tio",
+        "match_date": "2025-04-29T17:49:44.580426",
         "set_scores": [
             {
-                "player1_score": 11,
-                "player2_score": 0
+                "player1_score": 0,
+                "player2_score": 11
             },
             {
-                "player1_score": 11,
-                "player2_score": 0
+                "player1_score": 0,
+                "player2_score": 11
             }
         ],
         "max_sets": 3,
@@ -22,191 +22,12 @@
     },
     {
         "id": 2,
-        "player1": "Marcello",
-        "player2": "Fikri",
-        "player1_sets": 3,
-        "player2_sets": 0,
-        "winner": "Marcello",
-        "match_date": "2025-04-29T15:45:43.735601",
-        "set_scores": [
-            {
-                "player1_score": 11,
-                "player2_score": 0
-            },
-            {
-                "player1_score": 11,
-                "player2_score": 0
-            },
-            {
-                "player1_score": 11,
-                "player2_score": 0
-            }
-        ],
-        "max_sets": 5,
-        "first_server": "Fikri"
-    },
-    {
-        "id": 3,
-        "player1": "Dwi",
-        "player2": "Imanda",
-        "player1_sets": 0,
-        "player2_sets": 2,
-        "winner": "Imanda",
-        "match_date": "2025-04-29T15:46:57.188840",
-        "set_scores": [
-            {
-                "player1_score": 0,
-                "player2_score": 11
-            },
-            {
-                "player1_score": 0,
-                "player2_score": 11
-            }
-        ],
-        "max_sets": 3,
-        "first_server": "Dwi"
-    },
-    {
-        "id": 4,
-        "player1": "Fikri",
-        "player2": "Vindra",
-        "player1_sets": 2,
-        "player2_sets": 3,
-        "winner": "Vindra",
-        "match_date": "2025-04-29T15:49:05.813381",
-        "set_scores": [
-            {
-                "player1_score": 2,
-                "player2_score": 11
-            },
-            {
-                "player1_score": 0,
-                "player2_score": 11
-            },
-            {
-                "player1_score": 11,
-                "player2_score": 0
-            },
-            {
-                "player1_score": 11,
-                "player2_score": 0
-            },
-            {
-                "player1_score": 0,
-                "player2_score": 11
-            }
-        ],
-        "max_sets": 5,
-        "first_server": "Fikri"
-    },
-    {
-        "id": 5,
-        "player1": "Reiky",
-        "player2": "Vindra",
-        "player1_sets": 2,
-        "player2_sets": 0,
-        "winner": "Reiky",
-        "match_date": "2025-04-29T15:52:17.912676",
-        "set_scores": [
-            {
-                "player1_score": 11,
-                "player2_score": 2
-            },
-            {
-                "player1_score": 11,
-                "player2_score": 0
-            }
-        ],
-        "max_sets": 3,
-        "first_server": "Vindra"
-    },
-    {
-        "id": 6,
         "player1": "Oki",
-        "player2": "Zidan",
-        "player1_sets": 1,
-        "player2_sets": 2,
-        "winner": "Zidan",
-        "match_date": "2025-04-29T15:55:39.265785",
-        "set_scores": [
-            {
-                "player1_score": 11,
-                "player2_score": 0
-            },
-            {
-                "player1_score": 0,
-                "player2_score": 11
-            },
-            {
-                "player1_score": 0,
-                "player2_score": 11
-            }
-        ],
-        "max_sets": 3,
-        "first_server": "Zidan"
-    },
-    {
-        "id": 7,
-        "player1": "Reiky",
-        "player2": "Dimas",
-        "player1_sets": 2,
-        "player2_sets": 3,
-        "winner": "Dimas",
-        "match_date": "2025-04-29T15:57:47.454509",
-        "set_scores": [
-            {
-                "player1_score": 0,
-                "player2_score": 11
-            },
-            {
-                "player1_score": 0,
-                "player2_score": 11
-            },
-            {
-                "player1_score": 11,
-                "player2_score": 0
-            },
-            {
-                "player1_score": 11,
-                "player2_score": 0
-            },
-            {
-                "player1_score": 8,
-                "player2_score": 11
-            }
-        ],
-        "max_sets": 5,
-        "first_server": "Reiky"
-    },
-    {
-        "id": 8,
-        "player1": "Saya",
-        "player2": "Dia",
-        "player1_sets": 0,
-        "player2_sets": 2,
-        "winner": "Dia",
-        "match_date": "2025-04-29T15:58:25.746323",
-        "set_scores": [
-            {
-                "player1_score": 0,
-                "player2_score": 11
-            },
-            {
-                "player1_score": 0,
-                "player2_score": 11
-            }
-        ],
-        "max_sets": 3,
-        "first_server": "Dia"
-    },
-    {
-        "id": 9,
-        "player1": "Aku",
-        "player2": "Kamu",
+        "player2": "Fikri",
         "player1_sets": 2,
         "player2_sets": 0,
-        "winner": "Aku",
-        "match_date": "2025-04-29T15:59:51.154923",
+        "winner": "Oki",
+        "match_date": "2025-04-29T17:49:59.037338",
         "set_scores": [
             {
                 "player1_score": 11,
@@ -218,27 +39,6 @@
             }
         ],
         "max_sets": 3,
-        "first_server": "Kamu"
-    },
-    {
-        "id": 10,
-        "player1": "AAAAA",
-        "player2": "BBBBB",
-        "player1_sets": 0,
-        "player2_sets": 2,
-        "winner": "BBBBB",
-        "match_date": "2025-04-29T16:01:17.338122",
-        "set_scores": [
-            {
-                "player1_score": 12,
-                "player2_score": 14
-            },
-            {
-                "player1_score": 0,
-                "player2_score": 11
-            }
-        ],
-        "max_sets": 3,
-        "first_server": "AAAAA"
+        "first_server": "Oki"
     }
 ]

@@ -2,106 +2,29 @@
     {
         "id": 1,
         "name": "Marcello",
-        "wins": 2,
-        "matches_played": 2,
-        "created_at": "2025-04-29T15:40:44.035352"
-    },
-    {
-        "id": 4,
-        "name": "Dwi",
         "wins": 0,
         "matches_played": 1,
-        "created_at": "2025-04-29T15:46:49.791410"
-    },
-    {
-        "id": 5,
-        "name": "Imanda",
-        "wins": 1,
-        "matches_played": 1,
-        "created_at": "2025-04-29T15:46:49.925796"
-    },
-    {
-        "id": 3,
-        "name": "Fikri",
-        "wins": 0,
-        "matches_played": 2,
-        "created_at": "2025-04-29T15:45:28.608806"
+        "created_at": "2025-04-29T17:49:38.694463"
     },
     {
         "id": 2,
-        "name": "Vindra",
+        "name": "Tio",
         "wins": 1,
-        "matches_played": 3,
-        "created_at": "2025-04-29T15:40:44.171124"
+        "matches_played": 1,
+        "created_at": "2025-04-29T17:49:38.700121"
     },
     {
-        "id": 7,
+        "id": 3,
         "name": "Oki",
+        "wins": 1,
+        "matches_played": 1,
+        "created_at": "2025-04-29T17:49:53.667408"
+    },
+    {
+        "id": 4,
+        "name": "Fikri",
         "wins": 0,
         "matches_played": 1,
-        "created_at": "2025-04-29T15:55:25.591626"
-    },
-    {
-        "id": 8,
-        "name": "Zidan",
-        "wins": 1,
-        "matches_played": 1,
-        "created_at": "2025-04-29T15:55:25.734130"
-    },
-    {
-        "id": 6,
-        "name": "Reiky",
-        "wins": 1,
-        "matches_played": 2,
-        "created_at": "2025-04-29T15:52:09.676876"
-    },
-    {
-        "id": 9,
-        "name": "Dimas",
-        "wins": 1,
-        "matches_played": 1,
-        "created_at": "2025-04-29T15:57:30.111338"
-    },
-    {
-        "id": 10,
-        "name": "Saya",
-        "wins": 0,
-        "matches_played": 1,
-        "created_at": "2025-04-29T15:57:38.403936"
-    },
-    {
-        "id": 11,
-        "name": "Dia",
-        "wins": 1,
-        "matches_played": 1,
-        "created_at": "2025-04-29T15:57:38.542816"
-    },
-    {
-        "id": 12,
-        "name": "Aku",
-        "wins": 1,
-        "matches_played": 1,
-        "created_at": "2025-04-29T15:59:25.127048"
-    },
-    {
-        "id": 13,
-        "name": "Kamu",
-        "wins": 0,
-        "matches_played": 1,
-        "created_at": "2025-04-29T15:59:25.256695"
-    },
-    {
-        "id": 14,
-        "name": "AAAAA",
-        "wins": 0,
-        "matches_played": 1,
-        "created_at": "2025-04-29T16:00:37.669455"
-    },
-    {
-        "id": 15,
-        "name": "BBBBB",
-        "wins": 1,
-        "matches_played": 1,
-        "created_at": "2025-04-29T16:00:37.800746"
+        "created_at": "2025-04-29T17:49:53.671763"
     }
 ]
