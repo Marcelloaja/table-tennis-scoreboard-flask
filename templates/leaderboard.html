@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <h1 class="text-center mb-4">
+            <i class="fas fa-trophy text-warning me-2"></i> Table Tennis Leaderboard
+        </h1>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Top Players -->
+    <div class="col-lg-8">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0"><i class="fas fa-medal me-2"></i> Top Players</h3>
+            </div>
+            <div class="card-body">
+                {% if top_players %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Player</th>
+                                    <th>Wins</th>
+                                    <th>Matches Played</th>
+                                    <th>Win Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for player in top_players %}
+                                <tr class="{% if loop.index == 1 %}table-warning{% endif %}">
+                                    <td>{{ loop.index }}</td>
+                                    <td>
+                                        {% if loop.index == 1 %}
+                                            <i class="fas fa-crown text-warning me-1"></i>
+                                        {% elif loop.index == 2 %}
+                                            <i class="fas fa-crown text-secondary me-1"></i>
+                                        {% elif loop.index == 3 %}
+                                            <i class="fas fa-crown" style="color: #cd7f32; margin-right: 4px;"></i>
+                                        <!-- {% elif loop.index == 4 %}
+                                            <i class="fas fa-star text-info me-1"></i>
+                                        {% elif loop.index == 5 %}
+                                            <i class="fas fa-star text-success me-1"></i> -->
+                                        {% else %}
+                                            {{ loop.index }}
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ player.name }}</td>
+
+                                    <td>{{ player.wins }}</td>
+                                    <td>{{ player.matches_played }}</td>
+                                    <td>
+                                        {% if player.matches_played > 0 %}
+                                            {{ (player.wins / player.matches_played * 100) | round(1) }}%
+                                        {% else %}
+                                            0%
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i> No matches have been played yet. Start a match to see the leaderboard!
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recent Matches -->
+    <div class="col-lg-4">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-info text-white">
+                <h3 class="mb-0"><i class="fas fa-history me-2"></i> Recent Matches</h3>
+            </div>
+            <div class="card-body">
+                {% if recent_matches %}
+                    <div class="list-group">
+                        {% for match in recent_matches %}
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>{{ match.player1.name }}</strong> vs <strong>{{ match.player2.name }}</strong>
+                                </div>
+                                <span class="badge bg-primary">{{ match.player1_sets }}-{{ match.player2_sets }}</span>
+                            </div>
+                            <small class="text-muted">
+                                Winner: 
+                                <span class="text-success">{{ match.winner.name }}</span>
+                                <span class="float-end">{{ match.match_date.strftime('%Y-%m-%d %H:%M') }}</span>
+                            </small>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i> No match history yet.
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- Reset Data Form -->
+        <div class="card shadow">
+            <div class="card-header bg-danger text-white">
+                <h3 class="mb-0"><i class="fas fa-trash-alt me-2"></i> Reset Data</h3>
+            </div>
+            <div class="card-body">
+                <form action="{{ url_for('reset_data') }}" method="POST" onsubmit="return confirm('Are you sure you want to reset all data? This action cannot be undone.')">
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="delete_players" name="delete_players" value="true">
+                        <label class="form-check-label" for="delete_players">
+                            Also delete all players
+                        </label>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-exclamation-triangle me-2"></i> Reset All Data
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12 text-center">
+        <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">
+            <i class="fas fa-play-circle me-2"></i> Start New Match
+        </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,101 @@
+/* Custom CSS for Table Tennis Scoreboard */
+
+/* Main scoreboard styling */
+.scoreboard {
+    background-color: var(--bs-dark);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.score {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.sets {
+    font-size: 1.8rem;
+}
+
+.set-indicator {
+    font-size: 1.4rem;
+}
+
+/* Player name styling */
+.player-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Table tennis themed colors */
+.table-tennis-orange {
+    color: #ff6600;
+}
+
+.ping-pong-badge {
+    background-color: #ff6600;
+    color: white;
+}
+
+/* Game status area */
+.game-status {
+    min-height: 60px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Set win indicators */
+.set-wins {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.set-win-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--bs-secondary);
+    display: inline-block;
+}
+
+.set-win-indicator.active {
+    background-color: var(--bs-success);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .score {
+        font-size: 3.5rem;
+    }
+    .player-name {
+        font-size: 1.4rem;
+    }
+    .sets {
+        font-size: 1.4rem;
+    }
+}
+
+/* Animation for point scoring */
+@keyframes scorePoint {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.score-flash {
+    animation: scorePoint 0.3s ease-in-out;
+}
+
+/* Leaderboard styling */
+.leaderboard-card {
+    transition: transform 0.2s;
+}
+
+.leaderboard-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Top player highlight */
+.top-player {
+    border-left: 4px solid var(--bs-warning);
+}

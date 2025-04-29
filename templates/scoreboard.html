@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+        <!-- Hidden player IDs and match settings for JavaScript -->
+        <input type="hidden" id="player1-id" value="{{ player1.id }}">
+        <input type="hidden" id="player2-id" value="{{ player2.id }}">
+        <input type="hidden" id="max-sets" value="{{ max_sets }}">
+        <input type="hidden" id="first-server-id" value="{{ first_server_id }}">
+        
+        <!-- Current Set Indicator -->
+        <div class="text-center mb-4">
+            <h2 id="current-set" class="set-indicator">Set 1</h2>
+        </div>
+        
+        <!-- Main Scoreboard -->
+        <div class="card scoreboard mb-4">
+            <div class="card-body">
+                <div class="row align-items-center text-center">
+                    <!-- Player 1 -->
+                    <div class="col-5">
+                        <div class="player-name mb-2" id="player1-name">{{ player1.name }}</div>
+                        <div id="player1-server-indicator" class="server-indicator mb-2 d-none">
+                            <span class="badge bg-success"><i class="fas fa-table-tennis-paddle-ball"></i> SERVING</span>
+                        </div>
+                        <div class="score table-tennis-orange" id="player1-score">0</div>
+                        <div class="sets mb-3">Sets: <span id="player1-sets">0</span></div>
+                        <button id="player1-add" class="btn btn-primary btn-lg">
+                            <i class="fas fa-plus me-1"></i> Point
+                        </button>
+                    </div>
+                    
+                    <!-- VS -->
+                    <div class="col-2">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <span class="display-6 mb-2">VS</span>
+                            <div class="total-points mt-2">
+                                Points: <span id="total-points">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Player 2 -->
+                    <div class="col-5">
+                        <div class="player-name mb-2" id="player2-name">{{ player2.name }}</div>
+                        <div id="player2-server-indicator" class="server-indicator mb-2 d-none">
+                            <span class="badge bg-success"><i class="fas fa-table-tennis-paddle-ball"></i> SERVING</span>
+                        </div>
+                        <div class="score table-tennis-orange" id="player2-score">0</div>
+                        <div class="sets mb-3">Sets: <span id="player2-sets">0</span></div>
+                        <button id="player2-add" class="btn btn-primary btn-lg">
+                            <i class="fas fa-plus me-1"></i> Point
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Status -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="game-status text-center" id="game-status">
+                    Match started! First to win 2 sets.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <button id="restart-match" class="btn btn-warning">
+                <i class="fas fa-redo me-1"></i> Restart Match
+            </button>
+            <button id="finish-match" class="btn btn-success d-none">
+                <i class="fas fa-save me-1"></i> Save Match Result
+            </button>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">
+                <i class="fas fa-home me-1"></i> New Match
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/scoreboard.js') }}"></script>
+{% endblock %}
