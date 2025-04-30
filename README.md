@@ -19,7 +19,6 @@ A lightweight, dynamic web-based scoreboard application for managing and display
 ---
 
 ## 🖥️ App Screens (Suggestion)
-> 📌 You can add screenshots later in this section:
 > - Form Input
 ![image](https://github.com/user-attachments/assets/b638e6bf-8256-4ffe-9d03-f51d3b8bb6f1)
 > - Scoreboard
